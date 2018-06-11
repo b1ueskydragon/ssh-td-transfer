@@ -1,7 +1,6 @@
 timezone: 'Asia/Tokyo'
 
 _export:
-  !include : 'conf/time.dig'
   !include : 'conf/files.dig'
   !include : 'conf/mail.dig'
 
@@ -13,4 +12,4 @@ _export:
   _do:
     sh>: embulk run embulk/load_${datum}.yml.liquid
     _env:
-      file_date: ${time.yesterday}
+      file_date: ${moment(session_time).add(-1, 'days').format("YYYYMMDD")}
