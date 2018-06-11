@@ -11,6 +11,6 @@ _export:
   for_each>:
     datum: ${files}
   _do:
-    embulk>: embulk/load_${datum}.yml.liquid
+    sh>: embulk run embulk/load_${datum}.yml.liquid
     _env:
-      file_date: ${time.today}
+      file_date: ${time.yesterday}
