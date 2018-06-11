@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-target=execution_trigger_$(date "+%Y%m%d")_01
+target=sample_trigger_$(date "+%Y%m%d")_01
 END=6
 
 for i in $(seq 1 $END);
