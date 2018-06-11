@@ -1,0 +1,27 @@
+in:
+  type: file
+  path_prefix: '{{ env.file_date }}'
+  parser:
+    charset: UTF-8
+    newline: CRLF
+    type: csv
+    delimiter: ","
+    quote: '"'
+    escape: '"'
+    trim_if_not_quoted: false
+    skip_header_lines: 1
+    allow_extra_columns: false
+    allow_optional_columns: false
+    stop_on_invalid_record: true
+    escape: '"'
+    columns:
+    - {name: COLUMN_A, type: string}
+    - {name: COLUMN_B, type: timestamp, format: '%Y-%m-%d %H:%M:%S'}
+    - {name: COLUMN_C, type: long}
+filters:
+- type: add_time
+  to_column: {name: time, type: timestamp}
+  from_value: {mode: upload_time}
+out: {type: td, apikey: SECRET_KEY, endpoint: api.treasuredata.com,
+  database: DB_NAME, table: TB_NAME, time_column: time, mode: append,
+  default_timestamp_format: '%Y-%m-%d %H:%M:%S'}

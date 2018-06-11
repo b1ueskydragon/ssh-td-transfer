@@ -1,0 +1,15 @@
+task_name: ${task_name} <br>
+session_id: ${session_id} <br>
+session_time: ${session_time} <br>
+
+https://console.treasuredata.com/app/workflows/${session_id}/info
+<br>
+error_message:<br>
+<pre>
+    ${error.message}
+</pre>
+
+stack_trace:<br>
+<pre>
+    ${error.stacktrace}
+</pre>

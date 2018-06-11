@@ -1,0 +1,8 @@
+error_subject_prefix: '[Error: sample-batch]'
+mail:
+  from: "sample-sender@test.co.jp"
+  to: [sample-reciver@test.co.jp]
+  host: sample.test.jp
+  port: 25
+  tls: false
+  html: true

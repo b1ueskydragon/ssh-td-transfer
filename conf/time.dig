@@ -1,0 +1,4 @@
+time:
+  tomorrow: ${moment(session_time).add(1, 'days').format("YYYYMMDD")}
+  today: ${moment(session_time).format("YYYYMMDD")}
+  yesterday: ${moment(session_time).add(-1, 'days').format("YYYYMMDD")}

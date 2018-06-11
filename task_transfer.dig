@@ -1,0 +1,16 @@
+timezone: 'Asia/Tokyo'
+
+_export:
+  !include : 'conf/time.dig'
+  !include : 'conf/files.dig'
+  !include : 'conf/mail.dig'
+
++load:
+  _parallel: true
+
+  for_each>:
+    datum: ${files}
+  _do:
+    embulk>: embulk/load_${datum}.yml.liquid
+    _env:
+      file_date: ${time.today}
