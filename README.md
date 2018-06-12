@@ -2,8 +2,8 @@
 
 ### Process
 
-1. Lookup with sh in ssh server
-2. If tragger file(flag) was found, run digdag
+1. Lookup trigger file(flag) with sh in ssh server
+2. If trigger was found, run digdag
 3. Embulk would be invoked by digdag sh command
 4. Embulk helps data processing(加工) and data transfer(転送)
 
@@ -24,3 +24,4 @@ $ embulk gem install embulk-filter-add_time
 
 ### Remarks
 * Table name is same as file name.
+* Make batch/ as Source root. 

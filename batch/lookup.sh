@@ -5,7 +5,7 @@ END=6
 
 for i in $(seq 1 $END);
 do
-	if [ -e ./$target ]; then
+	if [ -e /SAMPLE_DIR/$target ]; then
 		echo "### Flag found. run digdag..."
 		digdag run task_transfer.dig
 		rm -rf .digdag/
