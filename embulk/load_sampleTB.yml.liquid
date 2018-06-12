@@ -22,6 +22,6 @@ filters:
 - type: add_time
   to_column: {name: time, type: timestamp}
   from_value: {mode: upload_time}
-out: {type: td, apikey: SECRET_KEY, endpoint: api.treasuredata.com,
-  database: DB_NAME, table: TB_NAME, time_column: time, mode: append,
+out: {type: td, apikey: {{ env.td_apikey }}, endpoint: api.treasuredata.com,
+  database: {{ env.td_fancl_db }}, table: {{ env.td_table }}, time_column: time, mode: append,
   default_timestamp_format: '%Y-%m-%d %H:%M:%S'}
