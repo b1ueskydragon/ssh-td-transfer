@@ -12,4 +12,8 @@ _export:
   _do:
     sh>: embulk run embulk/load_${datum}.yml.liquid
     _env:
-      file_date: ${moment(session_time).add(-1, 'days').format("YYYYMMDD")}
+      file_date: ${moment(session_time).format("YYYYMMDD")}
+
+
++call_workflow:
+  #td>: ## add workflow ##
