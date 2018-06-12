@@ -8,6 +8,7 @@ do
 	if [ -e ./$target ]; then
 		echo "### Flag found. run digdag..."
 		digdag run task_transfer.dig
+		rm -rf .digdag/
 		break
 	else
 		echo "### waiting count..."$i
