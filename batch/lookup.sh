@@ -1,18 +1,23 @@
 #!/usr/bin/bash
 
-target=trigger_$(date "+%Y%m%d")_01
-END=6
+TODAY=$(date "+%Y%m%d")
+target=execution_trigger_${TODAY}_01
+END=7
 
-for i in $(seq 1 $END);
+for i in $(seq 1 ${END});
 do
-	if [ -e /SAMPLE_DIR/$target ]; then
-		echo "### Flag found. run digdag..."
+	if [ -e ./${target} ]; then
+		echo "### flag found. run digdag >>> "
 		digdag run task_transfer.dig
 		rm -rf .digdag/
 		break
 	else
-		echo "### waiting count..."$i
-		sleep 600
-		continue
+		if [ ${i} -eq ${END} ]; then
+			echo "### flag not found. send mail ... "
+			# send a mail #
+		else
+			echo "### waiting count ... "${i}" /$((${END} - 1))"
+			sleep 600
+		fi
 	fi
 done
