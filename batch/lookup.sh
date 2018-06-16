@@ -14,7 +14,7 @@ do
 	else
 		if [ ${i} -eq ${END} ]; then
 			echo "### flag not found. send mail ... "
-			# send a mail #
+			cat lookup_mail.txt | sendmail -i -t
 		else
 			echo "### waiting count ... "${i}" /$((${END} - 1))"
 			sleep 600

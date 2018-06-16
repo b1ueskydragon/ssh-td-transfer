@@ -3,3 +3,6 @@
 
 # Digdag
 batch/.digdag/
+
+# sendmail
+batch/sendmail
