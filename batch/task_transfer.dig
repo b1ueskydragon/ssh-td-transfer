@@ -14,5 +14,5 @@ _export:
     _env:
       file_date: ${moment(session_time).format("YYYYMMDD")}
       td_apikey: SECRET_KEY
-      td_fancl_db: DB_NAME
+      td_db: DB_NAME
       td_table: ${datum}_test
