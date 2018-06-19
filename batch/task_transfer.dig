@@ -16,3 +16,7 @@ _export:
       td_apikey: SECRET_KEY
       td_db: DB_NAME
       td_table: ${datum}_test
+
+_error:
+  mail>: conf/mail_error.txt
+  subject: ${error_subject_prefix}${task_name}
