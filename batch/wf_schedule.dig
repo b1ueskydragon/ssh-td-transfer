@@ -4,7 +4,8 @@ _export:
   !include : 'conf/mail.dig'
 
 schedule:
-  hourly>: 07:00
+  #hourly>: 07:00
+  cron>: '00 07 * * *'
 
 +call_lookup:
   sh>: sh lookup.sh

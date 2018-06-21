@@ -25,3 +25,26 @@ $ embulk gem install embulk-filter-add_time
 ### Remarks
 * Table name is same as file name.
 * Make batch/ as Source root. 
+
+### How to schedule
+#### Use crontab 
+like (Permission required)
+```.bash
+$ crontab -e
+00 07 * * * sh /batch/lookup.sh
+```
+
+or..
+
+#### Use digdag scheduler
+But we should to check our host - e.g. localhost
+
+anyway
+```.bash
+$ digdag scheduler
+```
+
+We can check enrolled schedule with check command
+```.bash
+$ digdag check
+```
