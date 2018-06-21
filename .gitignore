@@ -4,5 +4,7 @@
 # Digdag
 batch/.digdag/
 
-# sendmail
+# Mail
 batch/sendmail
+batch/lookup_mail.txt
+batch/conf/mail.dig
