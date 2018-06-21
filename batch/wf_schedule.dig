@@ -7,7 +7,7 @@ schedule:
   hourly>: 07:00
 
 +call_lookup:
-  sh>: lookup.sh
+  sh>: sh lookup.sh
 
 _error:
   mail>: conf/mail_error.txt
