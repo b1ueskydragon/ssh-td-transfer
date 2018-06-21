@@ -1,0 +1,14 @@
+timezone: 'Asia/Tokyo'
+
+_export:
+  !include : 'conf/mail.dig'
+
+schedule:
+  hourly>: 07:00
+
++call_lookup:
+  sh>: lookup.sh
+
+_error:
+  mail>: conf/mail_error.txt
+  subject: ${error_subject_prefix}${task_name}
