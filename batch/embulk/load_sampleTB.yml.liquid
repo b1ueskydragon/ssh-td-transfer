@@ -23,7 +23,7 @@ filters:
   to_column: {name: time, type: timestamp}
   from_value: {mode: upload_time}
 - type: rename
-  rule:
+  rules:
   - rule: upper_to_lower
 out: {type: td, apikey: {{ env.td_apikey }}, endpoint: api.treasuredata.com,
   database: {{ env.td_db }}, table: {{ env.td_table }}, time_column: time, mode: append,
