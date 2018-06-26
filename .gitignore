@@ -8,3 +8,4 @@ batch/.digdag/
 batch/sendmail
 batch/lookup_mail.txt
 batch/conf/mail.dig
+batch/digdag_mail.txt
