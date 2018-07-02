@@ -1,0 +1,5 @@
+From: <sender@test.com>
+To: <reciver@test.com>
+Subject: [Error: task-transfer]
+
+transfer failed. please check logs.

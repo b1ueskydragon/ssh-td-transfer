@@ -2,7 +2,7 @@ timezone: 'Asia/Tokyo'
 
 _export:
   !include : 'conf/files.dig'
-  !include : 'conf/mail.dig'
+#  !include : 'conf/mail.dig'
 
 +load:
   _parallel: true
@@ -18,5 +18,6 @@ _export:
       td_table: ${datum}_test
 
 _error:
-  mail>: conf/mail_error.txt
-  subject: ${error_subject_prefix}${task_name}
+  sh>: cat digdag_mail.txt | sendmail -i -t
+#  mail>: conf/mail_error.txt
+#  subject: ${error_subject_prefix}${task_name}

@@ -1,15 +1,16 @@
 timezone: 'Asia/Tokyo'
 
-_export:
-  !include : 'conf/mail.dig'
+#_export:
+#  !include : 'conf/mail.dig'
 
 schedule:
   daily>: 07:00:00
-  #cron>: '00 07 * * *'
+#  cron>: '00 07 * * *'
 
 +call_lookup:
   sh>: sh lookup.sh
 
 _error:
-  mail>: conf/mail_error.txt
-  subject: ${error_subject_prefix}${task_name}
+  sh>: cat digdag_mail.txt | sendmail -i -t
+#  mail>: conf/mail_error.txt
+#  subject: ${error_subject_prefix}${task_name}
