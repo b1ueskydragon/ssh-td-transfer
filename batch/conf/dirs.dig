@@ -1,4 +1,4 @@
 dirs: [
-  'import',
-  'export'
+  'test_company/import',
+  'test_company/export'
 ]

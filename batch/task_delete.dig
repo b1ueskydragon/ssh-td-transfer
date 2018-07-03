@@ -9,8 +9,7 @@ _export:
   for_each>:
     datum: ${dirs}
   _do:
-    sh>: find /home/SAMPLE/${datum} -mtime +7 | xargs rm -rf
-    # TODO rm permission ?
+    sh>: find /home/${datum} -mtime +7 | xargs rm -rf
 
 _error:
   sh>: cat delete_mail.txt | sendmail -i -t
