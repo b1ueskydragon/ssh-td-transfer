@@ -3,7 +3,8 @@ timezone: 'Asia/Tokyo'
 schedule:
   daily>: 06:00:00
 
-# WIP
++call_task_delete:
+  call>: task_delete.dig
 
 _error:
-  sh>: cat digdag_mail.txt | sendmail -i -t
+  sh>: cat delete_mail.txt | sendmail -i -t

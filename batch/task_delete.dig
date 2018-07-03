@@ -1,0 +1,16 @@
+timezone: 'Asia/Tokyo'
+
+_export:
+  !include : 'conf/dirs.dig'
+
++load:
+  _parallel: true
+
+  for_each>:
+    datum: ${dirs}
+  _do:
+    sh>: find /home/SAMPLE/${datum} -mtime +7 | xargs rm -rf
+    # TODO rm permission ?
+
+_error:
+  sh>: cat delete_mail.txt | sendmail -i -t

@@ -9,3 +9,4 @@ batch/sendmail
 batch/lookup_mail.txt
 batch/conf/mail.dig
 batch/digdag_mail.txt
+batch/delete_mail.txt

@@ -1,0 +1,5 @@
+From: <sender@test.com>
+To: <reciver@test.com>
+Subject: [Error: task-delete]
+
+delete process failed. please check logs.
