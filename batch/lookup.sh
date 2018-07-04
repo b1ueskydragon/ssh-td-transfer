@@ -3,6 +3,7 @@
 TODAY=$(date "+%Y%m%d")
 target=execution_trigger_${TODAY}_01
 END=7
+WAITING_SEC=600
 
 for i in $(seq 1 ${END});
 do
@@ -17,7 +18,7 @@ do
 			cat lookup_mail.txt | sendmail -i -t
 		else
 			echo "### waiting count ... "${i}" /$((${END} - 1))"
-			sleep 600
+			sleep ${WAITING_SEC}
 		fi
 	fi
 done

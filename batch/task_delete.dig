@@ -9,6 +9,7 @@ _export:
   for_each>:
     datum: ${dirs}
   _do:
+    ### Please check your permission before execute sh command below ###
     sh>: find /home/${datum} -mtime +7 | xargs rm -rf
 
 _error:

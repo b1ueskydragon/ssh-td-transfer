@@ -24,13 +24,23 @@ $ embulk gem install embulk-filter-add_time
 
 ### Remarks
 * Table name is same as file name.
-* Make batch/ as Source root. 
+* Make batch/ as Source root (e.g. pycharm)
+* Please check your permission before execute sh command.
+* Check server's bash.
+
+```.sh
+$ which bash
+```
 
 ### How to schedule
 #### Use crontab 
 like (Permission required)
 ```.bash
+# check date
+$ date
+
 $ crontab -e
+# 7:00 am everyday
 00 07 * * * sh /batch/lookup.sh
 ```
 
