@@ -5,7 +5,7 @@
 1. Lookup trigger file(flag) with sh in ssh server
 2. If trigger was found, run digdag
 3. Embulk would be invoked by digdag sh command
-4. Embulk helps data processing(加工) and data transfer(転送)
+4. Embulk helps data processing (加工) and data transfer (転送)
 
 ### Tools
 * Digdag
@@ -27,6 +27,7 @@ $ embulk gem install embulk-filter-add_time
 * Make batch/ as Source root (e.g. pycharm)
 * Please check your permission before execute sh command.
 * Check server's bash.
+* For gmail user, could not receive an alert mail? - check security of your account
 
 ```.sh
 $ which bash
